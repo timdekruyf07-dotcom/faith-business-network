@@ -12,13 +12,12 @@
     :root {
       --cream: #f6f1e9;
       --paper: #fffcf7;
-      --ink: #1f1b16;
-      --ink-soft: #3a342c;
-      --text: #2d2924;
-      --muted: #6b645a;
+      --ink: #4a4036;
+      --text: #4a4036;
+      --muted: #7a6e60;
       --line: #e3d9c6;
       --gold: #b8934f;
-      --gold-dark: #7a5c26;
+      --gold-dark: #8a6a32;
       --sand: #e8dcc3;
     }
 
@@ -167,12 +166,15 @@
 
     .hero {
       padding: 65px 0 75px;
-      background: linear-gradient(
-        100deg,
-        #faf6ef 0%,
-        var(--cream) 45%,
-        #efe3cb 100%
-      );
+      background:
+        linear-gradient(
+          90deg,
+          rgba(246, 241, 233, .55) 0%,
+          rgba(246, 241, 233, .25) 45%,
+          rgba(246, 241, 233, 0) 75%
+        ),
+        url("images/achtergrond-goud.jpg") center / cover no-repeat;
+      background-color: var(--cream);
     }
 
     .hero-grid {
@@ -209,10 +211,10 @@
 
     .button {
       display: inline-block;
-      padding: 13px 24px;
-      border: 1px solid var(--ink);
-      background: var(--ink);
-      color: var(--cream);
+      padding: 12px 24px;
+      border: 1px solid var(--gold-dark);
+      background: rgba(255, 252, 247, .5);
+      color: var(--ink);
       text-decoration: none;
       font-size: 13px;
       cursor: pointer;
@@ -220,16 +222,16 @@
     }
 
     .button:hover {
-      border-color: var(--gold-dark);
-      background: var(--gold-dark);
-      color: white;
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--ink);
     }
 
     .text-link {
       color: var(--ink);
       font-size: 13px;
       text-decoration: underline;
-      text-decoration-color: var(--gold);
+      text-decoration-color: var(--gold-dark);
       text-underline-offset: 5px;
     }
 
@@ -359,40 +361,25 @@
 
     .podcast {
       background:
-        radial-gradient(
-          ellipse at 88% 18%,
-          rgba(184, 147, 79, .38) 0,
-          rgba(184, 147, 79, 0) 38%
-        ),
-        radial-gradient(
-          ellipse at 70% 90%,
-          rgba(255, 252, 247, .55) 0,
-          rgba(255, 252, 247, 0) 45%
-        ),
         linear-gradient(
-          115deg,
-          #f4ecdc 0%,
-          #e8d9b8 55%,
-          #dcc79c 100%
-        );
-      color: var(--ink);
+          rgba(246, 241, 233, .3),
+          rgba(246, 241, 233, .3)
+        ),
+        url("images/achtergrond-goud.jpg") 70% 40% / 150% auto no-repeat;
+      background-color: var(--sand);
     }
 
     .podcast .eyebrow {
-      color: #5e4519;
-    }
-
-    .podcast h2 {
-      color: var(--ink);
+      color: #6b5226;
     }
 
     .podcast p {
-      color: var(--text);
+      color: #5f554a;
     }
 
     .podcast-quote {
       padding: 35px 0 35px 40px;
-      border-left: 1px solid var(--gold);
+      border-left: 1px solid var(--gold-dark);
     }
 
     .podcast-quote blockquote {
@@ -405,6 +392,7 @@
       margin-top: 22px;
       padding: 7px 14px;
       border: 1px solid var(--gold-dark);
+      background: rgba(255, 252, 247, .5);
       color: var(--ink);
       font-size: 10px;
       letter-spacing: 2px;
@@ -448,7 +436,13 @@
 
     .contact {
       border-top: 1px solid var(--line);
-      background: #efe7d6;
+      background:
+        linear-gradient(
+          rgba(246, 241, 233, .45),
+          rgba(246, 241, 233, .45)
+        ),
+        url("images/achtergrond-goud.jpg") 30% 70% / cover no-repeat;
+      background-color: #efe7d6;
       text-align: center;
     }
 
@@ -485,7 +479,7 @@
     }
 
     dialog::backdrop {
-      background: rgba(31, 27, 22, .6);
+      background: rgba(60, 48, 36, .55);
     }
 
     dialog h2 {
@@ -561,6 +555,13 @@
 
       .hero {
         padding: 42px 0 50px;
+        background:
+          linear-gradient(
+            rgba(246, 241, 233, .45),
+            rgba(246, 241, 233, .45)
+          ),
+          url("images/achtergrond-goud.jpg") 65% center / cover no-repeat;
+        background-color: var(--cream);
       }
 
       .hero-grid,
@@ -608,10 +609,15 @@
         height: 280px;
       }
 
+      .podcast {
+        background-size: cover;
+        background-position: 70% center;
+      }
+
       .podcast-quote {
         padding: 28px 0 0;
         border-left: 0;
-        border-top: 1px solid var(--gold);
+        border-top: 1px solid var(--gold-dark);
       }
 
       .founders {
