@@ -1,0 +1,21 @@
+{
+  "agenda": [],
+  "agenda_teksten": {
+    "eyebrow": "Agenda",
+    "titel": "Aankomende bijeenkomsten",
+    "tekst": "Meld je aan voor een bijeenkomst via Eventbrite.",
+    "geen_bijeenkomsten": "De agenda en informatie over aanmelden volgen.",
+    "aanmeld_knop": "Aanmelden via Eventbrite ↗",
+    "geen_link": "Aanmelden is binnenkort mogelijk."
+  },
+  "pagina": {
+    "eyebrow": "Ontmoeten & inspireren",
+    "titel": "Nieuwe verbindingen.\nGedeelde inspiratie.",
+    "tekst_1": "Even uit de dagelijkse drukte van je onderneming. Aan tafel met mensen die begrijpen wat jou bezighoudt, met ruimte voor geloof, ideeën en nieuwe ontmoetingen.",
+    "tekst_2": "Ontdek Faith & Business Network en maak kennis met andere christelijke ondernemers.",
+    "knop_tekst": "Bekijk de agenda",
+    "foto": "/images/network.png",
+    "foto_alt": "Gegenereerd sfeerbeeld van een gezamenlijke ontmoeting aan tafel",
+    "bijschrift": "Een goed gesprek begint aan tafel."
+  }
+}
