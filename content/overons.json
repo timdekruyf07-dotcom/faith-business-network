@@ -1,0 +1,39 @@
+{
+  "intro": {
+    "eyebrow": "Ons verhaal",
+    "titel": "Vijf vrouwen.\nEen gedeelde missie.",
+    "tekst": "Achter Faith & Business Network staan vijf vrouwen met een hart voor geloof, verbinding en ondernemerschap. Samen bouwen zij aan een plek voor christelijke ondernemers."
+  },
+  "vrouwen": [
+    {
+      "naam": "Naam volgt",
+      "rol": "",
+      "tekst": "Hier komt de foto, naam en een korte introductie.",
+      "foto": ""
+    },
+    {
+      "naam": "Naam volgt",
+      "rol": "",
+      "tekst": "Hier komt de foto, naam en een korte introductie.",
+      "foto": ""
+    },
+    {
+      "naam": "Naam volgt",
+      "rol": "",
+      "tekst": "Hier komt de foto, naam en een korte introductie.",
+      "foto": ""
+    },
+    {
+      "naam": "Naam volgt",
+      "rol": "",
+      "tekst": "Hier komt de foto, naam en een korte introductie.",
+      "foto": ""
+    },
+    {
+      "naam": "Naam volgt",
+      "rol": "",
+      "tekst": "Hier komt de foto, naam en een korte introductie.",
+      "foto": ""
+    }
+  ]
+}
