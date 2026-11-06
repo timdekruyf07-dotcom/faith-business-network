@@ -434,6 +434,26 @@ h3 {
   background-color: var(--sand);
 }
 
+.bg-media {
+  background:
+    linear-gradient(
+      rgba(246, 241, 233, .5),
+      rgba(246, 241, 233, .5)
+    ),
+    url("images/achtergrond-goud.jpg") 85% 30% / 130% auto no-repeat;
+  background-color: var(--sand);
+}
+
+.bg-youtube {
+  background:
+    linear-gradient(
+      rgba(246, 241, 233, .4),
+      rgba(246, 241, 233, .4)
+    ),
+    url("images/achtergrond-goud.jpg") 15% 70% / 140% auto no-repeat;
+  background-color: var(--sand);
+}
+
 .podcast .eyebrow {
   color: #6b5226;
 }
@@ -693,6 +713,16 @@ footer a {
   .podcast {
     background-size: cover;
     background-position: 70% center;
+  }
+
+  .bg-media {
+    background-size: cover;
+    background-position: 75% center;
+  }
+
+  .bg-youtube {
+    background-size: cover;
+    background-position: 25% center;
   }
 
   .podcast-quote {
