@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bijeenkomsten van Faith & Business Network: ontmoet andere christelijke ondernemers.">
+  <meta name="description" content="Bijeenkomsten van Faith & Business Network: ontmoet andere christelijke ondernemers en meld je aan.">
   <meta name="theme-color" content="#f6f1e9">
   <title>Bijeenkomsten - Faith & Business Network</title>
   <link rel="stylesheet" href="stijl.css">
 </head>
 
-<body>
+<body data-inhoud="bijeenkomsten">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Faith & Business Network — Home">
@@ -46,7 +46,7 @@
   </header>
 
   <main>
-    <section class="section section-fill">
+    <section class="section">
       <div class="container split-grid">
         <figure class="meeting-visual">
           <img
@@ -56,55 +56,76 @@
             width="1536"
             height="1024"
             decoding="async"
+            data-foto="bijeenkomsten.pagina.foto"
+            data-alt="bijeenkomsten.pagina.foto_alt"
           >
 
-          <figcaption class="meeting-caption">
+          <figcaption class="meeting-caption" data-tekst="bijeenkomsten.pagina.bijschrift">
             Een goed gesprek begint aan tafel.
           </figcaption>
         </figure>
 
         <div class="split-copy">
-          <p class="eyebrow">Ontmoeten & inspireren</p>
+          <p class="eyebrow" data-tekst="bijeenkomsten.pagina.eyebrow">Ontmoeten & inspireren</p>
 
-          <h1 class="page-title">Nieuwe verbindingen.<br>Gedeelde inspiratie.</h1>
+          <h1 class="page-title" data-tekst="bijeenkomsten.pagina.titel">Nieuwe verbindingen.<br>Gedeelde inspiratie.</h1>
 
-          <p>
+          <p data-tekst="bijeenkomsten.pagina.tekst_1">
             Even uit de dagelijkse drukte van je onderneming.
             Aan tafel met mensen die begrijpen wat jou bezighoudt,
             met ruimte voor geloof, ideeën en nieuwe ontmoetingen.
           </p>
 
-          <p>
+          <p data-tekst="bijeenkomsten.pagina.tekst_2">
             Ontdek Faith & Business Network en maak kennis
             met andere christelijke ondernemers.
           </p>
 
-          <a class="button" href="instagram.html">
-            Volg ons op Instagram
-          </a>
+          <a class="button" href="#agenda" data-tekst="bijeenkomsten.pagina.knop_tekst">Bekijk de agenda</a>
+        </div>
+      </div>
+    </section>
 
-          <p class="small-note">
-            De agenda en informatie over aanmelden volgen.
+    <section class="section section-fill agenda" id="agenda">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-tekst="bijeenkomsten.agenda_teksten.eyebrow">Agenda</p>
+
+          <h2 class="page-title" data-tekst="bijeenkomsten.agenda_teksten.titel">Aankomende bijeenkomsten</h2>
+
+          <p data-tekst="bijeenkomsten.agenda_teksten.tekst">
+            Meld je aan voor een bijeenkomst via Eventbrite.
           </p>
         </div>
+
+        <div class="events" data-lijst="bijeenkomsten.agenda" data-soort="bijeenkomst"></div>
+
+        <p
+          class="empty-note"
+          data-leeg="bijeenkomsten.agenda"
+          data-tekst="bijeenkomsten.agenda_teksten.geen_bijeenkomsten"
+        >
+          De agenda en informatie over aanmelden volgen.
+        </p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-inner">
-      <p>© 2026 Faith & Business Network</p>
+      <p data-tekst="algemeen.footer.tekst">© 2026 Faith & Business Network</p>
       <p>
         <a
           href="https://www.instagram.com/faithandbusinessnetwork/"
           target="_blank"
           rel="noopener noreferrer"
-        >Instagram ↗</a>
-        · Ontwerpvoorstel · voorlopige teksten en gegenereerde sfeerfoto.
+          data-link="algemeen.links.instagram"
+        >Instagram ↗</a><span class="footer-note" data-tekst="algemeen.footer.notitie" data-prefix=" · "></span>
       </p>
     </div>
   </footer>
 
   <script src="menu.js"></script>
+  <script src="inhoud.js"></script>
 </body>
 </html>
