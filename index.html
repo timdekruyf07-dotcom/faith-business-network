@@ -9,9 +9,12 @@
   <link rel="stylesheet" href="stijl.css">
 </head>
 
-<body>
+<body data-inhoud="home">
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
+
       <a class="brand" href="index.html" aria-label="Faith & Business Network — Home">
         <span class="brand-name">Faith</span>
         <span class="brand-subtitle">IN BUSINESS</span>
@@ -28,53 +31,117 @@
       </button>
 
       <nav class="navigation" id="navigation" aria-label="Hoofdnavigatie">
-        <a href="index.html" class="active" aria-current="page">Home</a>
-        <a href="over-ons.html">Over ons</a>
-        <a href="bijeenkomsten.html">Bijeenkomsten</a>
+
+        <a href="index.html" class="active" aria-current="page">
+          Home
+        </a>
+
+        <a href="over-ons.html">
+          Over ons
+        </a>
+
+        <a href="bijeenkomsten.html">
+          Bijeenkomsten
+        </a>
 
         <div class="has-submenu">
-          <a href="media.html">Media</a>
+
+          <a href="media.html">
+            Media
+          </a>
 
           <ul class="submenu" aria-label="Media-opties">
-            <li><a href="youtube.html">YouTube</a></li>
-            <li><a href="podcast.html">Podcast</a></li>
-            <li><a href="instagram.html">Instagram</a></li>
+
+            <li>
+              <a href="youtube.html">YouTube</a>
+            </li>
+
+            <li>
+              <a href="podcast.html">Podcast</a>
+            </li>
+
+            <li>
+              <a href="instagram.html">Instagram</a>
+            </li>
+
           </ul>
+
         </div>
+
       </nav>
+
     </div>
   </header>
 
+
+  <!-- HOOFDINHOUD -->
   <main>
+
+
+    <!-- HERO SECTIE -->
     <section class="hero">
+
       <div class="container hero-grid">
+
         <div>
-          <p class="eyebrow">Faith & Business Network</p>
+
+          <p
+            class="eyebrow"
+            data-tekst="home.hero.eyebrow"
+          >
+            Faith & Business Network
+          </p>
 
           <h1>
-            Ondernemen<br>
-            met geloof.<br>
-            <em>Groeien in verbinding.</em>
+
+            <span data-tekst="home.hero.titel">
+              Ondernemen<br>
+              met geloof.
+            </span>
+
+            <br>
+
+            <em data-tekst="home.hero.titel_accent">
+              Groeien in verbinding.
+            </em>
+
           </h1>
 
-          <p class="hero-description">
+          <p
+            class="hero-description"
+            data-tekst="home.hero.tekst"
+          >
             Een plek waar christelijke ondernemers elkaar ontmoeten,
             ervaringen delen en elkaar versterken. Vanuit geloof,
             met aandacht voor jouw onderneming.
           </p>
 
           <div class="buttons">
-            <a class="button" href="bijeenkomsten.html">
+
+            <a
+              class="button"
+              href="bijeenkomsten.html"
+              data-tekst="home.hero.knop_tekst"
+            >
               Ontdek de bijeenkomsten
             </a>
 
-            <a class="text-link" href="over-ons.html">
+            <a
+              class="text-link"
+              href="over-ons.html"
+              data-tekst="home.hero.link_tekst"
+            >
               Ons verhaal →
             </a>
+
           </div>
+
         </div>
 
+
+        <!-- HERO AFBEELDING -->
         <figure class="hero-visual">
+
           <img
             class="hero-photo"
             src="images/network.png"
@@ -82,81 +149,186 @@
             width="1536"
             height="1024"
             fetchpriority="high"
+            data-foto="home.hero.foto"
+            data-alt="home.hero.foto_alt"
           >
 
-          <figcaption class="photo-caption">
+          <figcaption
+            class="photo-caption"
+            data-tekst="home.hero.bijschrift"
+          >
             Business with a purpose.
           </figcaption>
+
         </figure>
+
       </div>
+
     </section>
 
-    <section class="values" aria-label="Waar we voor staan">
-      <div class="container values-grid">
+
+
+    <!-- DE DRIE WAARDEN -->
+    <section
+      class="values"
+      aria-label="Waar we voor staan"
+    >
+
+      <div
+        class="container values-grid"
+        data-lijst="home.waarden"
+        data-soort="waarde"
+      >
+
+        <!-- WAARDE 1 -->
         <article class="value">
-          <span class="value-number">01</span>
-          <h3>Geloof</h3>
+
+          <span class="value-number">
+            01
+          </span>
+
+          <h3>
+            Geloof
+          </h3>
+
           <p>
             Ruimte om te ontdekken hoe jouw geloof en
             ondernemerschap elkaar kunnen versterken.
           </p>
+
         </article>
 
+
+        <!-- WAARDE 2 -->
         <article class="value">
-          <span class="value-number">02</span>
-          <h3>Verbinding</h3>
+
+          <span class="value-number">
+            02
+          </span>
+
+          <h3>
+            Verbinding
+          </h3>
+
           <p>
             Ontmoet andere ondernemers, deel je verhaal
             en leer van elkaars ervaringen.
           </p>
+
         </article>
 
+
+        <!-- WAARDE 3 -->
         <article class="value">
-          <span class="value-number">03</span>
-          <h3>Ondernemerschap</h3>
+
+          <span class="value-number">
+            03
+          </span>
+
+          <h3>
+            Ondernemerschap
+          </h3>
+
           <p>
             Nieuwe inzichten en waardevolle gesprekken
             voor ondernemen met betekenis.
           </p>
+
         </article>
+
       </div>
+
     </section>
 
+
+
+    <!-- CONTACT SECTIE -->
     <section class="section contact">
+
       <div class="container">
+
         <div class="section-heading">
-          <p class="eyebrow">Laten we kennismaken</p>
 
-          <h2>Ook onderdeel worden<br>van het verhaal?</h2>
+          <p
+            class="eyebrow"
+            data-tekst="home.contact.eyebrow"
+          >
+            Laten we kennismaken
+          </p>
 
-          <p>
+          <h2 data-tekst="home.contact.titel">
+            Ook onderdeel worden<br>
+            van het verhaal?
+          </h2>
+
+          <p data-tekst="home.contact.tekst">
             Volg ons op Instagram voor een eerste kennismaking,
             inspiratie en nieuws vanuit het netwerk.
             Je kunt ons daar ook een bericht sturen.
           </p>
+
         </div>
 
-        <a class="button" href="instagram.html">
+        <a
+          class="button"
+          href="instagram.html"
+          data-tekst="home.contact.knop_tekst"
+        >
           Naar onze Instagram-pagina
         </a>
+
       </div>
+
     </section>
+
+
   </main>
 
+
+
+  <!-- FOOTER -->
   <footer>
+
     <div class="container footer-inner">
-      <p>© 2026 Faith & Business Network</p>
+
+      <p data-tekst="algemeen.footer.tekst">
+        © 2026 Faith & Business Network
+      </p>
+
       <p>
+
         <a
           href="https://www.instagram.com/faithandbusinessnetwork/"
           target="_blank"
           rel="noopener noreferrer"
-        >Instagram ↗</a>
-        · Ontwerpvoorstel · voorlopige teksten en gegenereerde sfeerfoto.
+          data-link="algemeen.links.instagram"
+        >
+          Instagram ↗
+        </a>
+
+        <span
+          class="footer-note"
+          data-tekst="algemeen.footer.notitie"
+          data-prefix=" · "
+        >
+          · Ontwerpvoorstel · voorlopige teksten en gegenereerde sfeerfoto.
+        </span>
+
       </p>
+
     </div>
+
   </footer>
 
+
+
+  <!-- JAVASCRIPT -->
+
+  <!-- Mobiel menu -->
   <script src="menu.js"></script>
+
+  <!-- Koppeling met Sveltia CMS -->
+  <script src="inhoud.js"></script>
+
 </body>
 </html>
