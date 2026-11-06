@@ -1,0 +1,357 @@
+backend:
+  name: github
+  repo: timdekruyf07-dotcom/faith-business-network
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "paginas"
+    label: "Website aanpassen"
+
+    files:
+      - name: "bijeenkomsten"
+        label: "Bijeenkomsten en agenda"
+        file: "content/bijeenkomsten.json"
+        format: "json"
+
+        fields:
+          - label: "Agenda"
+            name: "agenda"
+            widget: "list"
+            label_singular: "bijeenkomst"
+            summary: "{{fields.datum}} · {{fields.titel}}"
+            required: false
+            default: []
+            hint: "Klik op de plus om een nieuwe bijeenkomst op de website te zetten. Verwijder een bijeenkomst als die voorbij is."
+
+            fields:
+              - label: "Naam van de bijeenkomst"
+                name: "titel"
+                widget: "string"
+
+              - label: "Datum"
+                name: "datum"
+                widget: "string"
+                hint: "Bijvoorbeeld: Zaterdag 14 maart 2026"
+
+              - label: "Tijd"
+                name: "tijd"
+                widget: "string"
+                required: false
+                hint: "Bijvoorbeeld: 09:30 - 11:30 uur"
+
+              - label: "Locatie"
+                name: "locatie"
+                widget: "string"
+                required: false
+
+              - label: "Korte beschrijving"
+                name: "beschrijving"
+                widget: "text"
+                required: false
+
+              - label: "Eventbrite-link"
+                name: "aanmeldlink"
+                widget: "string"
+                required: false
+                hint: "Plak hier de link van de bijeenkomst op Eventbrite. Bezoekers klikken dan op de knop Aanmelden en komen op Eventbrite."
+                pattern:
+                  - '^https://\S+$'
+                  - "De link moet beginnen met https://"
+
+          - label: "Teksten bij de agenda"
+            name: "agenda_teksten"
+            widget: "object"
+            collapsed: true
+
+            fields:
+              - {label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string", required: false}
+              - {label: "Titel", name: "titel", widget: "string"}
+              - {label: "Tekst onder de titel", name: "tekst", widget: "text", required: false}
+
+              - label: "Tekst als er geen bijeenkomsten gepland zijn"
+                name: "geen_bijeenkomsten"
+                widget: "text"
+                required: false
+
+              - label: "Tekst op de aanmeldknop"
+                name: "aanmeld_knop"
+                widget: "string"
+                hint: "Bijvoorbeeld: Aanmelden via Eventbrite ↗"
+
+              - label: "Tekst als een bijeenkomst nog geen Eventbrite-link heeft"
+                name: "geen_link"
+                widget: "string"
+                required: false
+
+          - label: "Tekst en foto bovenaan de pagina"
+            name: "pagina"
+            widget: "object"
+            collapsed: true
+
+            fields:
+              - {label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string", required: false}
+
+              - label: "Titel"
+                name: "titel"
+                widget: "text"
+                hint: "Druk op Enter voor een nieuwe regel."
+
+              - {label: "Eerste alinea", name: "tekst_1", widget: "text", required: false}
+              - {label: "Tweede alinea", name: "tekst_2", widget: "text", required: false}
+              - {label: "Tekst op de knop naar de agenda", name: "knop_tekst", widget: "string"}
+              - {label: "Foto", name: "foto", widget: "image", required: false}
+
+              - label: "Beschrijving van de foto"
+                name: "foto_alt"
+                widget: "string"
+                required: false
+                hint: "Beschrijf kort wat op de foto staat, voor bezoekers die een schermlezer gebruiken."
+
+              - {label: "Tekst onder de foto", name: "bijschrift", widget: "string", required: false}
+
+      - name: "home"
+        label: "Home"
+        file: "content/home.json"
+        format: "json"
+
+        fields:
+          - label: "Bovenaan de pagina"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+
+            fields:
+              - {label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string", required: false}
+
+              - label: "Titel"
+                name: "titel"
+                widget: "text"
+                hint: "Druk op Enter voor een nieuwe regel."
+
+              - {label: "Tweede deel van de titel", name: "titel_accent", widget: "string", required: false}
+              - {label: "Tekst onder de titel", name: "tekst", widget: "text", required: false}
+              - {label: "Tekst op de grote knop", name: "knop_tekst", widget: "string"}
+              - {label: "Tekst van de link naast de knop", name: "link_tekst", widget: "string", required: false}
+              - {label: "Foto", name: "foto", widget: "image", required: false}
+
+              - label: "Beschrijving van de foto"
+                name: "foto_alt"
+                widget: "string"
+                required: false
+                hint: "Beschrijf kort wat op de foto staat, voor bezoekers die een schermlezer gebruiken."
+
+              - {label: "Tekst onder de foto", name: "bijschrift", widget: "string", required: false}
+
+          - label: "De drie waarden"
+            name: "waarden"
+            widget: "list"
+            label_singular: "waarde"
+            summary: "{{fields.titel}}"
+            min: 3
+            max: 3
+
+            fields:
+              - {label: "Titel", name: "titel", widget: "string"}
+              - {label: "Tekst", name: "tekst", widget: "text"}
+
+          - label: "Blok onderaan de pagina"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+
+            fields:
+              - {label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string", required: false}
+
+              - label: "Titel"
+                name: "titel"
+                widget: "text"
+                hint: "Druk op Enter voor een nieuwe regel."
+
+              - {label: "Tekst", name: "tekst", widget: "text", required: false}
+              - {label: "Tekst op de knop", name: "knop_tekst", widget: "string"}
+
+      - name: "overons"
+        label: "Over ons"
+        file: "content/overons.json"
+        format: "json"
+
+        fields:
+          - label: "Tekst bovenaan de pagina"
+            name: "intro"
+            widget: "object"
+            collapsed: true
+
+            fields:
+              - {label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string", required: false}
+
+              - label: "Titel"
+                name: "titel"
+                widget: "text"
+                hint: "Druk op Enter voor een nieuwe regel."
+
+              - {label: "Tekst onder de titel", name: "tekst", widget: "text", required: false}
+
+          - label: "De vrouwen achter het netwerk"
+            name: "vrouwen"
+            widget: "list"
+            label_singular: "vrouw"
+            summary: "{{fields.naam}}"
+            required: false
+            default: []
+            hint: "Voeg een vrouw toe of verwijder er een. Ze komen in deze volgorde op de website."
+
+            fields:
+              - {label: "Naam", name: "naam", widget: "string"}
+              - {label: "Functie of rol", name: "rol", widget: "string", required: false}
+              - {label: "Korte introductie", name: "tekst", widget: "text", required: false}
+
+              - label: "Foto"
+                name: "foto"
+                widget: "image"
+                required: false
+                hint: "Zonder foto staat er een nummer."
+
+      - name: "media"
+        label: "Media (YouTube, podcast en Instagram)"
+        file: "content/media.json"
+        format: "json"
+
+        fields:
+          - label: "Overzichtspagina Media"
+            name: "overzicht"
+            widget: "object"
+            collapsed: true
+
+            fields:
+              - {label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string", required: false}
+
+              - label: "Titel"
+                name: "titel"
+                widget: "text"
+                hint: "Druk op Enter voor een nieuwe regel."
+
+              - {label: "Tekst onder de titel", name: "tekst", widget: "text", required: false}
+              - {label: "Tekst bij YouTube", name: "youtube_tekst", widget: "string", required: false}
+              - {label: "Tekst bij de podcast", name: "podcast_tekst", widget: "string", required: false}
+              - {label: "Tekst bij Instagram", name: "instagram_tekst", widget: "string", required: false}
+
+          - label: "Pagina YouTube"
+            name: "youtube"
+            widget: "object"
+            collapsed: true
+
+            fields:
+              - {label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string", required: false}
+
+              - label: "Titel"
+                name: "titel"
+                widget: "text"
+                hint: "Druk op Enter voor een nieuwe regel."
+
+              - {label: "Tekst onder de titel", name: "tekst", widget: "text", required: false}
+
+              - label: "Tekst op het label zolang er nog geen YouTube-link is"
+                name: "status"
+                widget: "string"
+                required: false
+                hint: "Bijvoorbeeld: Binnenkort"
+
+              - label: "Tekst op de knop naar YouTube"
+                name: "knop_tekst"
+                widget: "string"
+                hint: "De knop verschijnt zodra je bij Links en onderkant een YouTube-link invult."
+
+          - label: "Pagina Podcast"
+            name: "podcast"
+            widget: "object"
+            collapsed: true
+
+            fields:
+              - {label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string", required: false}
+
+              - label: "Titel"
+                name: "titel"
+                widget: "text"
+                hint: "Druk op Enter voor een nieuwe regel."
+
+              - {label: "Tekst onder de titel", name: "tekst", widget: "text", required: false}
+              - {label: "Quote", name: "quote", widget: "text", required: false}
+
+              - label: "Tekst op het label zolang er nog geen podcastlink is"
+                name: "status"
+                widget: "string"
+                required: false
+                hint: "Bijvoorbeeld: Binnenkort"
+
+              - label: "Tekst op de knop naar de podcast"
+                name: "knop_tekst"
+                widget: "string"
+                hint: "De knop verschijnt zodra je bij Links en onderkant een podcastlink invult."
+
+          - label: "Pagina Instagram"
+            name: "instagram"
+            widget: "object"
+            collapsed: true
+
+            fields:
+              - {label: "Kleine tekst boven de titel", name: "eyebrow", widget: "string", required: false}
+
+              - label: "Titel"
+                name: "titel"
+                widget: "text"
+                hint: "Druk op Enter voor een nieuwe regel."
+
+              - {label: "Tekst onder de titel", name: "tekst", widget: "text", required: false}
+              - {label: "Tekst op de knop", name: "knop_tekst", widget: "string"}
+
+      - name: "algemeen"
+        label: "Links en onderkant van de website"
+        file: "content/algemeen.json"
+        format: "json"
+
+        fields:
+          - label: "Links"
+            name: "links"
+            widget: "object"
+
+            fields:
+              - label: "Instagram-link"
+                name: "instagram"
+                widget: "string"
+                pattern:
+                  - '^https://\S+$'
+                  - "De link moet beginnen met https://"
+
+              - label: "YouTube-link"
+                name: "youtube"
+                widget: "string"
+                required: false
+                hint: "Laat leeg zolang er geen kanaal is. Zodra je hier een link invult, verschijnt de knop op de YouTube-pagina."
+                pattern:
+                  - '^https://\S+$'
+                  - "De link moet beginnen met https://"
+
+              - label: "Podcast-link"
+                name: "podcast"
+                widget: "string"
+                required: false
+                hint: "Bijvoorbeeld de link naar Spotify of Apple Podcasts. Laat leeg zolang er geen podcast is."
+                pattern:
+                  - '^https://\S+$'
+                  - "De link moet beginnen met https://"
+
+          - label: "Onderkant van elke pagina"
+            name: "footer"
+            widget: "object"
+
+            fields:
+              - {label: "Tekst links onderaan", name: "tekst", widget: "string"}
+
+              - label: "Extra tekst rechts onderaan"
+                name: "notitie"
+                widget: "string"
+                required: false
+                hint: "Laat leeg om deze tekst te verwijderen."
