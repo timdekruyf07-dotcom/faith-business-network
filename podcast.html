@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="stijl.css">
 </head>
 
-<body>
+<body data-inhoud="media">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Faith & Business Network — Home">
@@ -49,21 +49,34 @@
     <section class="section podcast section-fill">
       <div class="container split-grid">
         <div class="split-copy">
-          <p class="eyebrow">Faith & Business Podcast</p>
+          <p class="eyebrow" data-tekst="media.podcast.eyebrow">Faith & Business Podcast</p>
 
-          <h1 class="page-title">Verhalen die<br>je verder brengen.</h1>
+          <h1 class="page-title" data-tekst="media.podcast.titel">Verhalen die<br>je verder brengen.</h1>
 
-          <p>
+          <p data-tekst="media.podcast.tekst">
             Gesprekken over geloof, ondernemen en de keuzes
             die daarbij horen. Met ruimte voor de mooie
             momenten én de uitdagingen.
           </p>
 
-          <span class="coming-soon">Binnenkort</span>
+          <span
+            class="coming-soon"
+            data-tekst="media.podcast.status"
+            data-niet-als="algemeen.links.podcast"
+          >Binnenkort</span>
+
+          <a
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-link="algemeen.links.podcast"
+            data-tekst="media.podcast.knop_tekst"
+            hidden
+          >Luister naar de podcast ↗</a>
         </div>
 
         <div class="podcast-quote">
-          <blockquote>
+          <blockquote data-tekst="media.podcast.quote">
             “Wat betekent het om te ondernemen
             vanuit wat je gelooft?”
           </blockquote>
@@ -74,18 +87,19 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>© 2026 Faith & Business Network</p>
+      <p data-tekst="algemeen.footer.tekst">© 2026 Faith & Business Network</p>
       <p>
         <a
           href="https://www.instagram.com/faithandbusinessnetwork/"
           target="_blank"
           rel="noopener noreferrer"
-        >Instagram ↗</a>
-        · Ontwerpvoorstel · voorlopige teksten en gegenereerde sfeerfoto.
+          data-link="algemeen.links.instagram"
+        >Instagram ↗</a><span class="footer-note" data-tekst="algemeen.footer.notitie" data-prefix=" · "></span>
       </p>
     </div>
   </footer>
 
   <script src="menu.js"></script>
+  <script src="inhoud.js"></script>
 </body>
 </html>
