@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "eyebrow": "Faith & Business Network",
+    "titel": "Ondernemen\nmet geloof.",
+    "titel_accent": "Groeien in verbinding.",
+    "tekst": "Een plek waar christelijke ondernemers elkaar ontmoeten, ervaringen delen en elkaar versterken. Vanuit geloof, met aandacht voor jouw onderneming.",
+    "knop_tekst": "Ontdek de bijeenkomsten",
+    "link_tekst": "Ons verhaal →",
+    "foto": "/images/network.png",
+    "foto_alt": "Gegenereerd sfeerbeeld van ondernemers die samen aan tafel in gesprek zijn",
+    "bijschrift": "Business with a purpose."
+  },
+  "waarden": [
+    {
+      "titel": "Geloof",
+      "tekst": "Ruimte om te ontdekken hoe jouw geloof en ondernemerschap elkaar kunnen versterken."
+    },
+    {
+      "titel": "Verbinding",
+      "tekst": "Ontmoet andere ondernemers, deel je verhaal en leer van elkaars ervaringen."
+    },
+    {
+      "titel": "Ondernemerschap",
+      "tekst": "Nieuwe inzichten en waardevolle gesprekken voor ondernemen met betekenis."
+    }
+  ],
+  "contact": {
+    "eyebrow": "Laten we kennismaken",
+    "titel": "Ook onderdeel worden\nvan het verhaal?",
+    "tekst": "Volg ons op Instagram voor een eerste kennismaking, inspiratie en nieuws vanuit het netwerk. Je kunt ons daar ook een bericht sturen.",
+    "knop_tekst": "Naar onze Instagram-pagina"
+  }
+}
