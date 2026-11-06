@@ -357,6 +357,11 @@ h3 {
   font-size: 13px;
 }
 
+.value .text-link {
+  display: inline-block;
+  margin-top: 16px;
+}
+
 .section {
   padding: 85px 0;
 }
