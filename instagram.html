@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="stijl.css">
 </head>
 
-<body>
+<body data-inhoud="media">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Faith & Business Network — Home">
@@ -49,11 +49,11 @@
     <section class="section contact section-fill">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Faith & Business op Instagram</p>
+          <p class="eyebrow" data-tekst="media.instagram.eyebrow">Faith & Business op Instagram</p>
 
-          <h1 class="page-title">Volg ons en blijf<br>op de hoogte.</h1>
+          <h1 class="page-title" data-tekst="media.instagram.titel">Volg ons en blijf<br>op de hoogte.</h1>
 
-          <p>
+          <p data-tekst="media.instagram.tekst">
             Volg ons op Instagram voor inspiratie en nieuws
             vanuit het netwerk. Je kunt ons daar ook een
             bericht sturen.
@@ -65,27 +65,28 @@
           href="https://www.instagram.com/faithandbusinessnetwork/"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Bekijk ons op Instagram ↗
-        </a>
+          data-link="algemeen.links.instagram"
+          data-tekst="media.instagram.knop_tekst"
+        >Bekijk ons op Instagram ↗</a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-inner">
-      <p>© 2026 Faith & Business Network</p>
+      <p data-tekst="algemeen.footer.tekst">© 2026 Faith & Business Network</p>
       <p>
         <a
           href="https://www.instagram.com/faithandbusinessnetwork/"
           target="_blank"
           rel="noopener noreferrer"
-        >Instagram ↗</a>
-        · Ontwerpvoorstel · voorlopige teksten en gegenereerde sfeerfoto.
+          data-link="algemeen.links.instagram"
+        >Instagram ↗</a><span class="footer-note" data-tekst="algemeen.footer.notitie" data-prefix=" · "></span>
       </p>
     </div>
   </footer>
 
   <script src="menu.js"></script>
+  <script src="inhoud.js"></script>
 </body>
 </html>
