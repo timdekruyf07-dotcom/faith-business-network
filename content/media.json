@@ -1,0 +1,31 @@
+{
+  "overzicht": {
+    "eyebrow": "Media",
+    "titel": "Kijk, luister en\nvolg mee.",
+    "tekst": "Kies hieronder hoe je Faith & Business Network wilt volgen.",
+    "youtube_tekst": "Video's van Faith & Business Network.",
+    "podcast_tekst": "Gesprekken over geloof en ondernemen.",
+    "instagram_tekst": "Inspiratie en nieuws vanuit het netwerk."
+  },
+  "youtube": {
+    "eyebrow": "Faith & Business op YouTube",
+    "titel": "Kijk mee en\nlaat je inspireren.",
+    "tekst": "Hier komen de video's van Faith & Business Network te staan.",
+    "status": "Binnenkort",
+    "knop_tekst": "Bekijk ons kanaal op YouTube ↗"
+  },
+  "podcast": {
+    "eyebrow": "Faith & Business Podcast",
+    "titel": "Verhalen die\nje verder brengen.",
+    "tekst": "Gesprekken over geloof, ondernemen en de keuzes die daarbij horen. Met ruimte voor de mooie momenten én de uitdagingen.",
+    "quote": "“Wat betekent het om te ondernemen vanuit wat je gelooft?”",
+    "status": "Binnenkort",
+    "knop_tekst": "Luister naar de podcast ↗"
+  },
+  "instagram": {
+    "eyebrow": "Faith & Business op Instagram",
+    "titel": "Volg ons en blijf\nop de hoogte.",
+    "tekst": "Volg ons op Instagram voor inspiratie en nieuws vanuit het netwerk. Je kunt ons daar ook een bericht sturen.",
+    "knop_tekst": "Bekijk ons op Instagram ↗"
+  }
+}
