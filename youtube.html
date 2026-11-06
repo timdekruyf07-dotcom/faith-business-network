@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="stijl.css">
 </head>
 
-<body>
+<body data-inhoud="media">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Faith & Business Network — Home">
@@ -49,15 +49,28 @@
     <section class="section section-fill bg-youtube">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Faith & Business op YouTube</p>
+          <p class="eyebrow" data-tekst="media.youtube.eyebrow">Faith & Business op YouTube</p>
 
-          <h1 class="page-title">Kijk mee en<br>laat je inspireren.</h1>
+          <h1 class="page-title" data-tekst="media.youtube.titel">Kijk mee en<br>laat je inspireren.</h1>
 
-          <p>
+          <p data-tekst="media.youtube.tekst">
             Hier komen de video's van Faith & Business Network te staan.
           </p>
 
-          <span class="coming-soon">Binnenkort</span>
+          <span
+            class="coming-soon"
+            data-tekst="media.youtube.status"
+            data-niet-als="algemeen.links.youtube"
+          >Binnenkort</span>
+
+          <a
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-link="algemeen.links.youtube"
+            data-tekst="media.youtube.knop_tekst"
+            hidden
+          >Bekijk ons kanaal op YouTube ↗</a>
         </div>
       </div>
     </section>
@@ -65,18 +78,19 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>© 2026 Faith & Business Network</p>
+      <p data-tekst="algemeen.footer.tekst">© 2026 Faith & Business Network</p>
       <p>
         <a
           href="https://www.instagram.com/faithandbusinessnetwork/"
           target="_blank"
           rel="noopener noreferrer"
-        >Instagram ↗</a>
-        · Ontwerpvoorstel · voorlopige teksten en gegenereerde sfeerfoto.
+          data-link="algemeen.links.instagram"
+        >Instagram ↗</a><span class="footer-note" data-tekst="algemeen.footer.notitie" data-prefix=" · "></span>
       </p>
     </div>
   </footer>
 
   <script src="menu.js"></script>
+  <script src="inhoud.js"></script>
 </body>
 </html>
