@@ -14,6 +14,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -133,6 +138,59 @@ h3 {
   text-decoration: underline;
   text-decoration-color: var(--gold);
   text-underline-offset: 6px;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu > a::after {
+  content: "▾";
+  margin-left: 6px;
+  color: var(--gold-dark);
+  font-size: 10px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  z-index: 30;
+  min-width: 180px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  transform: translateX(-50%);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--gold);
+  background: var(--paper);
+  box-shadow: 0 8px 25px rgba(70, 50, 20, .12);
+}
+
+.submenu::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 22px;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background: var(--cream);
+  text-decoration: none;
 }
 
 .menu-button {
@@ -401,6 +459,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.section-heading .coming-soon {
+  margin-top: 4px;
+}
+
 .founders {
   display: flex;
   flex-wrap: wrap;
@@ -500,6 +562,10 @@ footer a {
 }
 
 @media (max-width: 720px) {
+  html {
+    scroll-padding-top: 85px;
+  }
+
   .container {
     width: calc(100% - 36px);
   }
@@ -533,6 +599,34 @@ footer a {
 
   .navigation a {
     padding: 12px 0;
+  }
+
+  .has-submenu > a::after {
+    content: none;
+  }
+
+  .submenu {
+    display: block;
+    position: static;
+    min-width: 0;
+    padding: 0 0 0 16px;
+    transform: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .submenu::before {
+    content: none;
+  }
+
+  .submenu a {
+    padding: 10px 0;
+    color: var(--muted);
+  }
+
+  .submenu a:hover {
+    background: transparent;
   }
 
   .hero {
@@ -620,6 +714,10 @@ footer a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .button {
     transition: none;
   }
