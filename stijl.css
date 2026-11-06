@@ -153,6 +153,13 @@ h3 {
   text-transform: uppercase;
 }
 
+.page-title {
+  margin-bottom: 20px;
+  color: var(--ink);
+  font-size: clamp(34px, 4vw, 48px);
+  letter-spacing: -1px;
+}
+
 .hero {
   padding: 65px 0 75px;
   background:
@@ -395,9 +402,14 @@ h3 {
 }
 
 .founders {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 26px;
+}
+
+.founder {
+  width: calc((100% - 52px) / 3);
 }
 
 .founder-visual {
@@ -410,11 +422,11 @@ h3 {
   font: 65px Georgia, serif;
 }
 
-.founder:nth-child(2) .founder-visual {
+.founder:nth-child(2n) .founder-visual {
   background: var(--sand);
 }
 
-.founder:nth-child(3) .founder-visual {
+.founder:nth-child(3n) .founder-visual {
   background: #ecdfc4;
 }
 
@@ -480,6 +492,10 @@ footer a {
 
   .hero-photo {
     height: 430px;
+  }
+
+  .founder {
+    width: calc((100% - 26px) / 2);
   }
 }
 
@@ -587,8 +603,11 @@ footer a {
   }
 
   .founders {
-    grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 35px 0;
+  }
+
+  .founder {
+    width: 100%;
   }
 
   .founder-visual {
@@ -604,10 +623,4 @@ footer a {
   .button {
     transition: none;
   }
-}
-.page-title {
-  margin-bottom: 20px;
-  color: var(--ink);
-  font-size: clamp(34px, 4vw, 48px);
-  letter-spacing: -1px;
 }
